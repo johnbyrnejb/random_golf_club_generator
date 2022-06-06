@@ -1,6 +1,6 @@
 import random
 
-clubs = ['Dr',
+clubs = ['Driver',
          '3 Wood',
          'Hybrid',
          '4 Iron',
@@ -17,4 +17,4 @@ clubs = ['Dr',
 
 def select_random_club():
     random_club = random.choice(clubs)
-    return f'Your random club is {random_club}'
+    return f'Your random club is a {random_club}'
