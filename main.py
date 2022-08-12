@@ -22,6 +22,9 @@ templates = Jinja2Templates(directory="templates")
 # @app.get("/club", response_class=HTMLResponse)
 # async def return_random_club(request: Request):
 #     return templates.TemplateResponse("random_club.html", {"request": request, "club": select_random_club()})
+@app.get("/", response_class=HTMLResponse)
+async def root(request: Request):
+    return templates.TemplateResponse("random_nasa.html", {"request": request, "space": return_nasa_info()})
 
 
 @app.get("/space", response_class=HTMLResponse)
